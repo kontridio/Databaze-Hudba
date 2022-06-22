@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zanrs",
+  "info": {
+    "singularName": "zanr",
+    "pluralName": "zanrs",
+    "displayName": "Zanr",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "zanr": {
+      "type": "string"
+    },
+    "umelci": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "zanrs"
+    }
+  }
+}

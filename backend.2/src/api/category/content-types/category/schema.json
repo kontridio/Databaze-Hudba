@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Umělci",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nazev": {
+      "type": "string",
+      "required": true
+    },
+    "stat": {
+      "type": "string",
+      "required": true
+    },
+    "obrazek": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "skladba": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "audios",
+        "videos"
+      ]
+    },
+    "roky": {
+      "type": "string",
+      "default": "1999-2022",
+      "required": true,
+      "maxLength": 16,
+      "minLength": 9
+    },
+    "informace": {
+      "type": "richtext"
+    },
+    "zanrs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::zanr.zanr",
+      "mappedBy": "umelci"
+    }
+  }
+}

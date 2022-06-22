@@ -1,0 +1,21 @@
+query {
+  categories(sort: ["nazev"]) {
+    data {
+      id
+      attributes {
+        obrazek
+        nazev
+        stat
+        roky
+        informace
+        zanrs {
+          data {
+            attributes {
+              zanr
+            }
+          }
+        }
+      }
+    }
+  }
+}
